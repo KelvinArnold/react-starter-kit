@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './assets/images/logo.svg';
 import './App.css';
+// Import router
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// Import Components
+import {PostContainer} from './components/Posts';
 
 class App extends Component {
   render() {
@@ -11,14 +15,11 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <BrowserRouter>
+            <Switch>
+              <Route path="/post" component={PostContainer}></Route>
+            </Switch>
+          </BrowserRouter>
         </header>
       </div>
     );
