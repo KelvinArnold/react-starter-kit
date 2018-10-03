@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './assets/images/logo.svg';
-import './App.css';
+import './assets/scss/app.scss';
 // Import router
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // Import Components
@@ -15,12 +15,15 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
+        </header>
+        {/* Router Page */}
+        <div>
           <BrowserRouter>
             <Switch>
               <Route path="/post" component={PostContainer}></Route>
             </Switch>
           </BrowserRouter>
-        </header>
+        </div>
       </div>
     );
   }
