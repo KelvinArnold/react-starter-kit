@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchPosts } from './../../actions/action-posts';
 import { bindActionCreators } from 'redux';
-import Post from './Post';
+import Posts from './Posts';
 
 const mapStateToProps = ({posts}) => ({
   posts
@@ -13,9 +13,9 @@ const mapDispatchToProps = (dispatch) => {
   }, dispatch)
 };
 
-const PostContainer = connect(
+const PostsContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Post);
+)(Posts);
 
-export default PostContainer;
+export default PostsContainer;
